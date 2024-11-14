@@ -274,6 +274,104 @@
                 box-shadow: none;
             }
         }
+
+        .faq-section {
+    padding: clamp(40px, 8vw, 80px) 0;
+    background: white;
+    border-top: 1px solid var(--gray-200);
+}
+
+.faq-subtitle {
+    text-align: center;
+    color: var(--gray-700);
+    margin-bottom: clamp(32px, 6vw, 48px);
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.accordion-item:first-child {
+    border-top: 1px solid var(--gray-200);
+}
+
+.accordion-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 4vw, 24px) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--gray-800);
+}
+
+.accordion-title {
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    padding-right: 24px;
+}
+
+.accordion-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    padding: 0 0 clamp(16px, 4vw, 24px);
+    color: var(--gray-700);
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.6;
+}
+
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.faq-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+}
+
+.faq-list li::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: var(--primary);
+}
+
+/* Add this to your existing media queries */
+@media (hover: hover) {
+    .accordion-trigger:hover .accordion-title {
+        color: var(--primary);
+    }
+}
+
+@media (max-width: 768px) {
+    .accordion-trigger {
+        padding: clamp(12px, 3vw, 16px) 0;
+    }
+    
+    .accordion-content {
+        padding: 0 0 clamp(12px, 3vw, 16px);
+    }
+}
+</style>
     </style>
 
     <!-- JSON-LD Schema Markup -->
@@ -323,7 +421,7 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transform Your Website's Rankings With Data-Driven SEO</h1>
+                <h1>SEO Consultant Services</h1>
                 <p class="hero-subtitle">Join 100+ businesses achieving first-page rankings through our proven strategies and transparent approach.</p>
                 <a href="#consultation" class="cta-btn">
                     Get Your Free SEO Analysis
@@ -422,6 +520,88 @@
             </div>
         </div>
 
+        <section class="faq-section">
+    <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">Everything you need to know about our SEO services</p>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span class="accordion-title">How long does it take to see results from SEO?</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content" hidden>
+                    <p>Most clients see initial improvements within 3-6 months. However, significant results typically emerge within 6-12 months, depending on your starting point, competition, and target keywords. We provide monthly progress reports to track all improvements.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span class="accordion-title">Do you guarantee first-page rankings?</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content" hidden>
+                    <p>While we don't guarantee specific rankings (no ethical SEO company can), we have a proven track record of achieving first-page results for our clients. Our data-driven approach and transparent reporting mean you'll always know exactly where you stand and what we're doing to improve your rankings.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span class="accordion-title">What makes your SEO services different?</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content" hidden>
+                    <p>We combine technical expertise with a personalized approach. Unlike other agencies, you'll work directly with senior SEO specialists who understand your business. We provide full transparency, monthly reports, and no long-term contracts. Our 97% client retention rate speaks to the effectiveness of our approach.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span class="accordion-title">What does your SEO process look like?</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content" hidden>
+                    <p>Our process includes:</p>
+                    <ul class="faq-list">
+                        <li>Comprehensive technical SEO audit</li>
+                        <li>Competitor analysis and keyword research</li>
+                        <li>Content strategy development</li>
+                        <li>On-page optimization</li>
+                        <li>Link building and authority development</li>
+                        <li>Regular monitoring and adjustments</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false">
+                    <span class="accordion-title">How much do your SEO services cost?</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                <div class="accordion-content" hidden>
+                    <p>Our SEO packages start from $2,000/month, with pricing based on your specific needs, competition level, and goals. We'll provide a detailed quote after analyzing your website during the free consultation call.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
         <section class="cta-section" id="consultation">
             <div class="container">
                 <h2 class="section-title">Ready to Transform Your SEO Results?</h2>
@@ -436,5 +616,30 @@
             </div>
         </section>
     </main>
+    <script>
+document.querySelectorAll('.accordion-trigger').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        
+        button.setAttribute('aria-expanded', !isExpanded);
+        content.hidden = isExpanded;
+        
+        // Smooth scroll into view if the content is expanding and not fully visible
+        if (!isExpanded) {
+            const rect = content.getBoundingClientRect();
+            const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+            
+            if (!isFullyVisible) {
+                const topOffset = window.pageYOffset + rect.top - 20;
+                window.scrollTo({
+                    top: topOffset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+</script>
 </body>
 </html>
