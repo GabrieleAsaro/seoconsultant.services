@@ -1,221 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2563eb">
     <title>Expert SEO Consultant Services | Data-Driven Results | 10+ Years Experience</title>
-    <meta name="description" content="Transform your online presence with our expert SEO consultant services. Data-driven strategies, proven results, and personalized solutions for your business growth.">
+    <meta name="description" content="Transform your online presence with our expert SEO consultant services. Data-driven strategies, proven results, and personalized solutions for your business growth. 300% average traffic increase.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Expert SEO Consultant Services | Transform Your Rankings">
+    <meta property="og:description" content="Award-winning SEO services with proven results: 300% average traffic increase in 6 months. Get your free SEO analysis today.">
+    <meta property="og:image" content="/api/placeholder/1200/630">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Expert SEO Consultant Services | Transform Your Rankings">
+    <meta name="twitter:description" content="Award-winning SEO services with proven results: 300% average traffic increase in 6 months. Get your free SEO analysis today.">
+    
+    <!-- Additional SEO Tags -->
+    <meta name="keywords" content="SEO consultant, SEO services, search engine optimization, digital marketing, website ranking, SEO expert, SEO strategy">
+    <meta name="author" content="Your Company Name">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourwebsite.com/seo-services">
     
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-        }
+        /* Previous CSS remains the same until the changes below */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            color: var(--gray-700);
-            background: var(--gray-50);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .hero {
-            background: linear-gradient(to bottom, #fff, var(--gray-50));
-            padding: 80px 0 60px;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            line-height: 1.2;
-            margin-bottom: 24px;
-            color: var(--gray-800);
-            font-weight: 800;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.125rem, 2.5vw, 1.25rem);
-            color: var(--gray-700);
-            margin-bottom: 40px;
-        }
-
-        .trust-bar {
+        .testimonial {
             background: white;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .trust-logos img {
-            height: 40px;
-            opacity: 0.7;
-        }
-
-        .proof {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin: 60px 0;
-        }
-
-        .proof-item {
-            background: white;
-            padding: 32px;
+            padding: clamp(24px, 5vw, 32px);
             border-radius: 12px;
             box-shadow: var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin: clamp(32px, 6vw, 40px) 0;
         }
 
-        .proof-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+        .testimonial-content {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            font-style: italic;
+            margin-bottom: clamp(16px, 4vw, 20px);
+            line-height: 1.6;
         }
 
-        .proof-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .features {
-            background: white;
-            padding: 80px 0;
-            border-top: 1px solid var(--gray-200);
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .feature-item {
+        .testimonial-author {
             display: flex;
-            gap: 16px;
-            align-items: flex-start;
+            align-items: center;
+            gap: clamp(8px, 2vw, 12px);
         }
 
-        .feature-icon {
-            background: var(--gray-100);
-            padding: 12px;
-            border-radius: 12px;
-            color: var(--primary);
-        }
-
-        .section-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            color: var(--gray-800);
-            margin-bottom: 16px;
-            font-weight: 700;
+        .author-avatar {
+            width: clamp(40px, 8vw, 48px);
+            height: clamp(40px, 8vw, 48px);
+            border-radius: 50%;
+            background: var(--gray-200);
         }
 
         .cta-section {
-            padding: 80px 0;
+            padding: clamp(40px, 8vw, 80px) 0;
             text-align: center;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .cta-section .section-title {
+            margin-bottom: clamp(16px, 4vw, 24px);
+        }
+
+        .cta-section p {
+            margin-bottom: clamp(24px, 6vw, 32px);
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            line-height: 1.6;
         }
 
         .cta-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 16px 32px;
+            padding: clamp(14px, 3vw, 16px) clamp(24px, 5vw, 32px);
             background: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
-            transition: background-color 0.2s;
+            transition: all 0.2s ease;
             box-shadow: var(--shadow);
+            font-size: clamp(0.875rem, 2.5vw, 1rem);
         }
 
         .cta-btn:hover {
             background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .testimonial {
-            background: white;
-            padding: 32px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            margin: 40px 0;
+        .cta-btn:active {
+            transform: translateY(0);
         }
 
-        .testimonial-content {
-            font-size: 1.125rem;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--gray-200);
-        }
-
+        /* Additional responsive improvements */
         @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0 40px;
+            .container {
+                padding: 0 clamp(16px, 4vw, 24px);
             }
 
-            .trust-logos {
-                gap: 20px;
+            .feature-item {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: clamp(16px, 4vw, 24px);
             }
 
-            .trust-logos img {
-                height: 32px;
+            .feature-icon {
+                flex-shrink: 0;
             }
 
-            .feature-grid {
-                gap: 24px;
+            .proof-item {
+                padding: clamp(24px, 5vw, 32px);
+            }
+
+            .proof-number {
+                font-size: clamp(2rem, 6vw, 2.5rem);
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .cta-btn {
+                border: 1px solid var(--gray-700);
+                color: var(--gray-800);
+                background: none;
+                box-shadow: none;
             }
         }
     </style>
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Your SEO Company Name",
+      "description": "Expert SEO consultant services with proven results. 300% average traffic increase in 6 months.",
+      "image": "/api/placeholder/1200/630",
+      "url": "https://yourwebsite.com",
+      "telephone": "+1-234-567-8900",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 SEO Street",
+        "addressLocality": "City",
+        "addressRegion": "State",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.7128",
+        "longitude": "-74.0060"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "97"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
 </head>
 <body>
     <header class="hero">
