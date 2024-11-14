@@ -710,27 +710,35 @@
         </div>
       </div>
     </footer>
-    <script>
-      document.querySelectorAll('.accordion-trigger').forEach(button => {
+    // Update the JavaScript section at the bottom of the page:
+<script>
+    document.querySelectorAll('.accordion-trigger').forEach((button, index) => {
+        const content = button.closest('.accordion-item').querySelector('.accordion-content');
+        const id = `faq-${index + 1}`;
+        
+        content.id = id;
+        button.setAttribute('aria-controls', id);
+        
         button.addEventListener('click', () => {
-          const content = button.nextElementSibling;
-          const isExpanded = button.getAttribute('aria-expanded') === 'true';
-          button.setAttribute('aria-expanded', !isExpanded);
-          content.hidden = isExpanded;
-          // Smooth scroll into view if the content is expanding and not fully visible
-          if (!isExpanded) {
-            const rect = content.getBoundingClientRect();
-            const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-            if (!isFullyVisible) {
-              const topOffset = window.pageYOffset + rect.top - 20;
-              window.scrollTo({
-                top: topOffset,
-                behavior: 'smooth'
-              });
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            content.hidden = isExpanded;
+            
+            // Smooth scroll into view if the content is expanding and not fully visible
+            if (!isExpanded) {
+                const rect = content.getBoundingClientRect();
+                const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+                
+                if (!isFullyVisible) {
+                    const topOffset = window.pageYOffset + rect.top - 20;
+                    window.scrollTo({
+                        top: topOffset,
+                        behavior: 'smooth'
+                    });
+                }
             }
-          }
         });
-      });
-    </script>
+    });
+</script>
   </body>
 </html>
