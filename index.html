@@ -315,24 +315,30 @@
         border-top: 1px solid var(--gray-200);
       }
 
-      .accordion-trigger {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: clamp(16px, 4vw, 24px) 0;
-        background: none;
-        border: none;
-        cursor: pointer;
-        text-align: left;
-        color: var(--gray-800);
-      }
+      .accordion-item h3 {
+    margin: 0; /* Remove default heading margins */
+}
 
-      .accordion-title {
-        font-weight: 600;
-        font-size: clamp(1rem, 2.5vw, 1.125rem);
-        padding-right: 24px;
-      }
+      .accordion-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(16px, 4vw, 24px) 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--gray-800);
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.accordion-title {
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    padding-right: 24px;
+}
 
       .accordion-icon {
         flex-shrink: 0;
