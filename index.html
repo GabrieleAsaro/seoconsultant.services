@@ -159,9 +159,15 @@
             font-weight: 600;
             transition: background-color 0.2s;
             box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
         }
         .cta-btn:hover {
             background: var(--primary-dark);
+        }
+        .cta-btn:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
         }
         .testimonial {
             background: white;
@@ -265,6 +271,16 @@
                 transition: none !important;
             }
         }
+
+        @media (max-width: 768px) {
+    .cta-btn {
+        min-height: 48px; /* Ensure minimum touch target size */
+        width: 100%; /* Full width on mobile for better tapping */
+        justify-content: center;
+        max-width: 320px; /* Maximum width to maintain readability */
+        margin: 0 auto;
+    }
+}
 
         /* Print styles */
         @media print {
@@ -423,13 +439,13 @@
             <div class="hero-content">
                 <h1>SEO Consultant Services</h1>
                 <p class="hero-subtitle">Join 100+ businesses achieving first-page rankings through our proven strategies and transparent approach.</p>
-                <a href="#consultation" class="cta-btn">
-                    Get Your Free SEO Analysis
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
+                <a href="https://lbllama.com/" class="cta-btn">
+    Get Your SEO Analysis
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+</a>
             </div>
         </div>
     </header>
@@ -606,13 +622,13 @@
             <div class="container">
                 <h2 class="section-title">Ready to Transform Your SEO Results?</h2>
                 <p>Schedule your free 30-minute strategy call. We'll analyze your current position and show you exactly what's possible for your website.</p>
-                <a href="#" class="cta-btn">
-                    Get Your Free SEO Analysis
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
+                <a href="https://lbllama.com/" class="cta-btn">
+    Get Your Free SEO Analysis
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+</a>
             </div>
         </section>
     </main>
