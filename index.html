@@ -93,6 +93,7 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
             margin: 60px 0;
+            margin-top: 24px;
         }
         .proof-item {
             background: white;
@@ -136,11 +137,15 @@
             lline-height: 1;
         }
         .section-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            color: var(--gray-800);
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--gray-800);
+    margin-bottom: clamp(16px, 4vw, 24px);
+    font-weight: 700;
+    text-align: center;
+}
+        .section-title:not(.text-center) {
+    text-align: left;
+}
         .cta-section {
             padding: 80px 0;
             text-align: center;
@@ -552,6 +557,7 @@
 
     <main>
         <section class="container">
+            <h2 class="section-title">Proven SEO Results</h2>
             <div class="proof">
                 <div class="proof-item">
                     <div class="proof-number">10+</div>
@@ -614,6 +620,7 @@
         </section>
 
         <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
             <div class="testimonial">
                 <p class="testimonial-content">"Their data-driven approach and transparency transformed our online presence. We've seen a 400% increase in organic traffic and our conversion rate has doubled."</p>
                 <div class="testimonial-author">
