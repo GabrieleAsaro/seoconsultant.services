@@ -699,6 +699,115 @@
           </a>
         </div>
       </section>
+
+      <section class="services-section" style="background: white; padding: clamp(40px, 8vw, 80px) 0; border-top: 1px solid var(--gray-200);">
+  <div class="container">
+    <h2 class="section-title">Comprehensive SEO Consulting Services</h2>
+    <p class="faq-subtitle" style="margin-bottom: clamp(32px, 6vw, 48px);">Transform your search engine optimization strategy with our expert team</p>
+    
+    <div class="accordion">
+      <!-- Strategic Analysis -->
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-title">Strategic SEO Analysis and Consulting</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button></h3>
+        <div class="accordion-content" hidden>
+          <p>Our experienced SEO consulting team conducts thorough analysis of your industry and competitors to identify key opportunities for search engine optimization. We develop customized SEO strategies based on:</p>
+          <ul class="faq-list">
+            <li>Comprehensive competitor analysis in your industry</li>
+            <li>Identification of high-value SEO opportunities</li>
+            <li>Analysis of current search results performance</li>
+            <li>Strategic recommendations from expert SEO consultants</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Technical Optimization -->
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-title">Technical SEO and Website Optimization</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button></h3>
+        <div class="accordion-content" hidden>
+          <p>Our SEO consulting services leverage advanced tools and techniques to optimize your websites for maximum visibility in search engines. We focus on:</p>
+          <ul class="faq-list">
+            <li>Technical SEO audit and optimization</li>
+            <li>Implementation of proven SEO strategies</li>
+            <li>Website performance enhancement</li>
+            <li>Search engine visibility optimization</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Digital Marketing Integration -->
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-title">Integrated Digital Marketing and SEO</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button></h3>
+        <div class="accordion-content" hidden>
+          <p>Our SEO consulting company combines strategic marketing expertise with technical optimization to enhance your online presence. Our comprehensive approach includes:</p>
+          <ul class="faq-list">
+            <li>Integration of SEO with digital marketing initiatives</li>
+            <li>Strategic backlinks development</li>
+            <li>Enhanced online presence and visibility</li>
+            <li>Conversion rate optimization techniques</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Performance Tracking -->
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-title">Analytics and Performance Tracking</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button></h3>
+        <div class="accordion-content" hidden>
+          <p>We utilize advanced analytics tools to track and optimize your SEO performance continuously. Our comprehensive monitoring includes:</p>
+          <ul class="faq-list">
+            <li>Detailed performance analytics and insights</li>
+            <li>Regular SEO strategy adjustments</li>
+            <li>Competitive performance tracking</li>
+            <li>ROI and conversion monitoring</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Advanced Techniques -->
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" aria-expanded="false">
+          <span class="accordion-title">Advanced SEO Techniques and Trends</span>
+          <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button></h3>
+        <div class="accordion-content" hidden>
+          <p>Stay ahead of the competition with our cutting-edge SEO techniques and trend analysis. Our team focuses on:</p>
+          <ul class="faq-list">
+            <li>Implementation of latest SEO trends</li>
+            <li>Advanced optimization techniques</li>
+            <li>Emerging search engine algorithms</li>
+            <li>Industry-specific SEO strategies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
     <footer class="footer">
       <div class="container">
@@ -737,6 +846,34 @@
             }
         });
     });
+</script>
+    <script>
+  document.querySelectorAll('.services-section .accordion-trigger').forEach((button, index) => {
+    const content = button.closest('.accordion-item').querySelector('.accordion-content');
+    const id = `service-${index + 1}`;
+    
+    content.id = id;
+    button.setAttribute('aria-controls', id);
+    
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !isExpanded);
+      content.hidden = isExpanded;
+      
+      if (!isExpanded) {
+        const rect = content.getBoundingClientRect();
+        const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        
+        if (!isFullyVisible) {
+          const topOffset = window.pageYOffset + rect.top - 20;
+          window.scrollTo({
+            top: topOffset,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
 </script>
   </body>
 </html>
